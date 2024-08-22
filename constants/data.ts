@@ -118,6 +118,12 @@ export const navItems: NavItem[] = [
     label: 'Dashboard'
   },
   {
+    title: 'Minhas listas',
+    href: '/minhas-listas',
+    icon: 'list',
+    label: 'Minhas listas'
+  },
+  {
     title: 'User',
     href: '/dashboard/user',
     icon: 'user',
