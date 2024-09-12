@@ -119,7 +119,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Minhas listas',
-    href: '/minhas-listas',
+    href: '/dashboard/minhas-listas',
     icon: 'list',
     label: 'Minhas listas'
   },
