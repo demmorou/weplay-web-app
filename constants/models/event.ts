@@ -11,12 +11,12 @@ export type EventModel = {
   day: Date;
   startAt: string;
   endsAt: string;
-  status: string;
+  status: 'confirmed' | 'pending' | 'canceled' | 'finished';
   createdAt: Date;
   updatedAt: Date;
   participants: string[];
-  place: PlaceModel;
-  manager: {
+  place?: PlaceModel;
+  manager?: {
     id: string;
     name: string;
   };

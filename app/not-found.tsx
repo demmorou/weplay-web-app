@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   const router = useRouter();
@@ -13,22 +13,21 @@ export default function NotFound() {
         404
       </span>
       <h2 className="font-heading my-2 text-2xl font-bold">
-        Something&apos;s missing
+        Algo está faltando
       </h2>
       <p>
-        Sorry, the page you are looking for doesn&apos;t exist or has been
-        moved.
+        Desculpe, a página que você está procurando não existe ou foi movida.
       </p>
       <div className="mt-8 flex justify-center gap-2">
         <Button onClick={() => router.back()} variant="default" size="lg">
-          Go back
+          Voltar
         </Button>
         <Button
-          onClick={() => router.push('/dashboard')}
+          onClick={() => router.push("/dashboard")}
           variant="ghost"
           size="lg"
         >
-          Back to Home
+          Voltar para o início
         </Button>
       </div>
     </div>

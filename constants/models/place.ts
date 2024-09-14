@@ -1,8 +1,8 @@
 export type PlaceModel = {
-  id: string;
+  id?: string;
   name: string;
   latitude: string;
   longitude: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 };

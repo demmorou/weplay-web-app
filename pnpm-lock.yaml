@@ -177,6 +177,9 @@ importers:
         specifier: ^4.4.6
         version: 4.5.5(@types/react@18.2.21)(react@18.3.1)
     devDependencies:
+      '@types/date-fns':
+        specifier: ^2.6.0
+        version: 2.6.0
       '@types/uuid':
         specifier: ^9.0.7
         version: 9.0.8
@@ -1174,6 +1177,10 @@ packages:
 
   '@types/d3-timer@3.0.2':
     resolution: {integrity: sha512-Ps3T8E8dZDam6fUyNiMkekK3XUsaUEik+idO9/YjPtfj2qruF8tFBXS7XhtE4iIXBLxhmLjP3SXpLhVf21I9Lw==}
+
+  '@types/date-fns@2.6.0':
+    resolution: {integrity: sha512-9DSw2ZRzV0Tmpa6PHHJbMcZn79HHus+BBBohcOaDzkK/G3zMjDUDYjJIWBFLbkh+1+/IOS0A59BpQfdr37hASg==}
+    deprecated: This is a stub types definition for date-fns (https://github.com/date-fns/date-fns). date-fns provides its own type definitions, so you don't need @types/date-fns installed!
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -4233,6 +4240,10 @@ snapshots:
   '@types/d3-time@3.0.3': {}
 
   '@types/d3-timer@3.0.2': {}
+
+  '@types/date-fns@2.6.0':
+    dependencies:
+      date-fns: 2.30.0
 
   '@types/json-schema@7.0.15': {}
 

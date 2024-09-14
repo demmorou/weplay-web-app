@@ -1,4 +1,5 @@
 import { NavItem } from '@/types';
+import { EventModel } from './models/event';
 
 export type User = {
   id: number;
@@ -118,10 +119,10 @@ export const navItems: NavItem[] = [
     label: 'Dashboard'
   },
   {
-    title: 'Minhas listas',
-    href: '/dashboard/minhas-listas',
+    title: 'Listas',
+    href: '/dashboard/listas',
     icon: 'list',
-    label: 'Minhas listas'
+    label: 'Listas'
   },
   {
     title: 'User',
@@ -154,3 +155,71 @@ export const navItems: NavItem[] = [
     label: 'login'
   }
 ];
+
+export const events: EventModel[] = [
+  {
+    id: "1",
+    placeId: "101",
+    managerId: "501",
+    name: "Futebol de Domingo",
+    price: 150,
+    minParticipants: 10,
+    maxParticipants: 20,
+    day: new Date('2024-09-15'),
+    startAt: "09:00",
+    endsAt: "11:00",
+    status: "confirmed",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    participants: ["John", "Lucas", "Maria"]
+  },
+  {
+    id: "2",
+    placeId: "102",
+    managerId: "502",
+    name: "Vôlei de Sexta",
+    price: 100,
+    minParticipants: 8,
+    maxParticipants: 12,
+    day: new Date('2024-09-20'),
+    startAt: "18:00",
+    endsAt: "20:00",
+    status: "pending",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    participants: ["Ana", "Pedro", "Carla"],
+  },
+  {
+    id: "3",
+    placeId: "103",
+    managerId: "503",
+    name: "Basquete Noturno",
+    price: 120,
+    minParticipants: 5,
+    maxParticipants: 10,
+    day: new Date('2024-09-22'),
+    startAt: "21:00",
+    endsAt: "23:00",
+    status: "canceled",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    participants: ["Carlos", "Eduardo", "Fernanda"],
+  },
+  {
+    id: "4",
+    placeId: "104",
+    managerId: "504",
+    name: "Racha da GOODLIFE",
+    price: 150,
+    minParticipants: 18,
+    maxParticipants: 24,
+    day: new Date('2024-09-22'),
+    startAt: "16:00",
+    endsAt: "18:00",
+    status: "finished",
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    participants: ["Carlos", "Eduardo", "Fernanda"],
+  }
+];
+
