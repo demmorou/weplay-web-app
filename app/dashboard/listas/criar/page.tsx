@@ -1,7 +1,7 @@
 "use client";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EventForm } from "@/components/forms/events/create-event";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
+import PageContainer from "@/components/layout/page-container";
 
 const breadcrumbItems = [
   { title: "Dashboard", link: "/dashboard" },
@@ -11,11 +11,11 @@ const breadcrumbItems = [
 
 export default function Page() {
   return (
-    <ScrollArea className="h-full">
+    <PageContainer scrollable>
       <div className="flex-1 space-y-4 p-8">
         <Breadcrumbs items={breadcrumbItems} />
         <EventForm />
       </div>
-    </ScrollArea>
+    </PageContainer>
   );
 }
