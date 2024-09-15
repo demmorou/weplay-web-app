@@ -8,7 +8,7 @@ export type EventModel = {
   price: number;
   minParticipants: number;
   maxParticipants: number;
-  day: Date;
+  day: string;
   startAt: string;
   endsAt: string;
   status: 'confirmed' | 'pending' | 'canceled' | 'finished';

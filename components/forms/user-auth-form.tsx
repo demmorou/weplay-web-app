@@ -40,7 +40,7 @@ export default function UserAuthForm() {
   const onSubmit = async (data: UserFormValue) => {
     signIn("credentials", {
       email: data.email,
-      callbackUrl: callbackUrl ?? "/dashboard",
+      callbackUrl: callbackUrl ?? "/dashboard/listas",
     });
   };
 

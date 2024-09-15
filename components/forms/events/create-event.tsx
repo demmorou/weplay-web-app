@@ -43,13 +43,13 @@ export const EventForm: FC<EventFormProps> = (props) => {
 
   // Default values
   const defaultValues: EventFormValues = {
-    name: "",
-    price: 0,
-    minParticipants: "1",
-    maxParticipants: "1",
-    day: new Date(),
-    startAt: "",
-    endsAt: "",
+    name: props.initialData?.name || "",
+    price: props.initialData?.price || "",
+    minParticipants: props.initialData?.minParticipants || "1",
+    maxParticipants: props.initialData?.maxParticipants || "10",
+    day: props.initialData?.day || "",
+    startAt: props.initialData?.startAt || "",
+    endsAt: props.initialData?.endsAt || "",
   };
 
   // Form

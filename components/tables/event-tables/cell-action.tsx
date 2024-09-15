@@ -9,7 +9,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { EventModel } from "@/constants/models/event";
-import { Edit, MoreHorizontal, RepeatIcon, Trash } from "lucide-react";
+import {
+  Edit,
+  MoreHorizontal,
+  RepeatIcon,
+  Trash,
+  ViewIcon,
+} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -42,6 +48,14 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Ações</DropdownMenuLabel>
 
+          {/* Details Action */}
+          <DropdownMenuItem
+            className="hover:cursor-pointer"
+            onClick={() => router.push(`/dashboard/listas/${data.id}`)}
+          >
+            <ViewIcon className="mr-2 h-4 w-4" /> Detalhar
+          </DropdownMenuItem>
+
           {/* Recreate Action */}
           <DropdownMenuItem
             className="hover:cursor-pointer"
@@ -53,9 +67,9 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
           {/* Update Action */}
           <DropdownMenuItem
             className="hover:cursor-pointer"
-            onClick={() => router.push(`/dashboard/user/${data.id}`)}
+            onClick={() => router.push(`/dashboard/listas/${data.id}/editar`)}
           >
-            <Edit className="mr-2 h-4 w-4" /> Atualizar
+            <Edit className="mr-2 h-4 w-4" /> Editar
           </DropdownMenuItem>
 
           {/* Delete Action */}

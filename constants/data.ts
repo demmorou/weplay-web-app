@@ -112,48 +112,48 @@ export type Employee = {
 };
 
 export const navItems: NavItem[] = [
-  {
-    title: 'Dashboard',
-    href: '/dashboard',
-    icon: 'dashboard',
-    label: 'Dashboard'
-  },
+  // {
+  //   title: 'Dashboard',
+  //   href: '/dashboard',
+  //   icon: 'dashboard',
+  //   label: 'Dashboard'
+  // },
   {
     title: 'Listas',
     href: '/dashboard/listas',
     icon: 'list',
     label: 'Listas'
   },
+  // {
+  //   title: 'User',
+  //   href: '/dashboard/user',
+  //   icon: 'user',
+  //   label: 'user'
+  // },
+  // {
+  //   title: 'Employee',
+  //   href: '/dashboard/employee',
+  //   icon: 'employee',
+  //   label: 'employee'
+  // },
   {
-    title: 'User',
-    href: '/dashboard/user',
-    icon: 'user',
-    label: 'user'
-  },
-  {
-    title: 'Employee',
-    href: '/dashboard/employee',
-    icon: 'employee',
-    label: 'employee'
-  },
-  {
-    title: 'Profile',
-    href: '/dashboard/profile',
+    title: 'Perfil',
+    href: '/dashboard/perfil',
     icon: 'profile',
     label: 'profile'
   },
-  {
-    title: 'Kanban',
-    href: '/dashboard/kanban',
-    icon: 'kanban',
-    label: 'kanban'
-  },
-  {
-    title: 'Login',
-    href: '/',
-    icon: 'login',
-    label: 'login'
-  }
+  // {
+  //   title: 'Kanban',
+  //   href: '/dashboard/kanban',
+  //   icon: 'kanban',
+  //   label: 'kanban'
+  // },
+  // {
+  //   title: 'Login',
+  //   href: '/',
+  //   icon: 'login',
+  //   label: 'login'
+  // }
 ];
 
 export const events: EventModel[] = [
@@ -161,17 +161,22 @@ export const events: EventModel[] = [
     id: "1",
     placeId: "101",
     managerId: "501",
-    name: "Futebol de Domingo",
+    name: "Racha da GOODLIFE",
     price: 150,
     minParticipants: 10,
     maxParticipants: 20,
-    day: new Date('2024-09-15'),
+    day: '2024-09-15',
     startAt: "09:00",
     endsAt: "11:00",
     status: "confirmed",
     createdAt: new Date(),
     updatedAt: new Date(),
-    participants: ["John", "Lucas", "Maria"]
+    participants: ["John", "Lucas", "Maria"],
+    place: {
+      latitude: '',
+      longitude: '',
+      name: 'Arena União',
+    }
   },
   {
     id: "2",
@@ -181,7 +186,7 @@ export const events: EventModel[] = [
     price: 100,
     minParticipants: 8,
     maxParticipants: 12,
-    day: new Date('2024-09-20'),
+    day: '2024-09-20',
     startAt: "18:00",
     endsAt: "20:00",
     status: "pending",
@@ -197,7 +202,7 @@ export const events: EventModel[] = [
     price: 120,
     minParticipants: 5,
     maxParticipants: 10,
-    day: new Date('2024-09-22'),
+    day: '2024-09-22',
     startAt: "21:00",
     endsAt: "23:00",
     status: "canceled",
@@ -213,7 +218,7 @@ export const events: EventModel[] = [
     price: 150,
     minParticipants: 18,
     maxParticipants: 24,
-    day: new Date('2024-09-22'),
+    day: '2024-09-22',
     startAt: "16:00",
     endsAt: "18:00",
     status: "finished",
