@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 const participantFormSchema = z.object({
   name: z
@@ -54,7 +55,7 @@ export const ParticipantForm: FC = () => {
                 <FormLabel>Nome</FormLabel>
                 <FormControl>
                   <Input
-                    type="number"
+                    type="text"
                     disabled={loading}
                     placeholder="Nome do participante"
                     {...field}
@@ -83,6 +84,12 @@ export const ParticipantForm: FC = () => {
               </FormItem>
             )}
           />
+
+          <div className="flex justify-end">
+            <Button variant={"default"} type="submit">
+              Confirmar
+            </Button>
+          </div>
         </form>
       </Form>
     </>

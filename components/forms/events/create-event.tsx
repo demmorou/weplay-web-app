@@ -13,13 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Heading } from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
-import {
-  CalendarIcon,
-  CopyCheckIcon,
-  CopyIcon,
-  Share2,
-  Trash,
-} from "lucide-react";
+import { CalendarIcon, CopyCheckIcon, CopyIcon, Trash } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import {
   Popover,
