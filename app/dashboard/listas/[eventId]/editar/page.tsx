@@ -6,6 +6,7 @@ import { EventForm } from "@/components/forms/events/create-event";
 import PageContainer from "@/components/layout/page-container";
 import { events } from "@/constants/data";
 import { useParams } from "next/navigation";
+import ParticipantsCardList from "@/components/events/participants-card-list";
 
 const breadcrumbItems = [
   { title: "Dashboard", link: "/dashboard" },
@@ -15,12 +16,15 @@ const breadcrumbItems = [
 
 export default function page() {
   const params = useParams();
+  const event = events[0];
 
   return (
     <PageContainer scrollable>
       <div className="flex-1 space-y-4 p-8">
         <Breadcrumbs items={breadcrumbItems} />
-        <EventForm initialData={events[0]} />
+        <EventForm initialData={event} />
+
+        <ParticipantsCardList data={event.participants} />
       </div>
     </PageContainer>
   );

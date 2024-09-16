@@ -19,6 +19,7 @@ export const eventFormSchema = z
     endsAt: z.string().regex(/^([0-1][0-9]|2[0-3]):([0-5][0-9])$/, {
       message: "O horário de término deve estar no formato HH:MM",
     }),
+    pixKey: z.string().optional(),
   })
   .refine((data) => data.maxParticipants >= data.minParticipants, {
     message: "O número máximo de participantes deve ser maior que o mínimo",

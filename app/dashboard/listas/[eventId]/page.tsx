@@ -12,6 +12,7 @@ import { Calendar, XIcon, MapPinIcon, MapPinnedIcon } from "lucide-react";
 import { ExitIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/format-currency";
+import ParticipantsCardList from "@/components/events/participants-card-list";
 
 const breadcrumbItems = [
   { title: "Dashboard", link: "/dashboard" },
@@ -70,29 +71,7 @@ export default function page() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader className="font-medium">
-            Participantes ({event.participants.length})
-          </CardHeader>
-
-          <CardContent>
-            <div className="flex flex-col space-y-2">
-              {event.participants.map((participant, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between rounded-md space-x-2 hover:bg-primary duration-200 transition"
-                >
-                  <p className="font-light text-sm text-primary-foreground">
-                    {participant}
-                  </p>
-                  <Button variant={"outline"} className="p-2">
-                    <XIcon size={16} color="red" />
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+        <ParticipantsCardList data={event.participants} />
       </div>
     </PageContainer>
   );
