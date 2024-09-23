@@ -8,8 +8,11 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useToast } from "@/components/ui/use-toast";
 import { EventModel } from "@/constants/models/event";
 import {
+  CopyCheckIcon,
+  CopyIcon,
   Edit,
   MoreHorizontal,
   RepeatIcon,
@@ -26,9 +29,23 @@ interface CellActionProps {
 export const CellAction: React.FC<CellActionProps> = ({ data }) => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
   const router = useRouter();
+  const { toast } = useToast();
 
   const onConfirm = async () => {};
+
+  const handleCopyLink = (eventId: string) => {
+    const link = `http://localhost:3000/${eventId}/participar`;
+    navigator.clipboard.writeText(link);
+    toast({
+      title: "Link copiado",
+      description: "O link foi copiado para a área de transferência",
+      variant: "default",
+    });
+    setLinkCopied(true);
+    setTimeout(() => setLinkCopied(false), 3000);
+  };
 
   return (
     <>
@@ -51,9 +68,14 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
           {/* Details Action */}
           <DropdownMenuItem
             className="hover:cursor-pointer"
-            onClick={() => router.push(`/dashboard/listas/${data.id}`)}
+            onClick={() => handleCopyLink(data.id)}
           >
-            <ViewIcon className="mr-2 h-4 w-4" /> Detalhar
+            {linkCopied ? (
+              <CopyCheckIcon className="mr-2 h-4 w-4" />
+            ) : (
+              <CopyIcon className="mr-2 h-4 w-4" />
+            )}{" "}
+            Compartilhar
           </DropdownMenuItem>
 
           {/* Recreate Action */}
@@ -61,7 +83,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
             className="hover:cursor-pointer"
             onClick={() => setOpen(true)}
           >
-            <RepeatIcon className="mr-2 h-4 w-4" /> Repetir
+            <RepeatIcon className="mr-2 h-4 w-4" /> Detalhar
           </DropdownMenuItem>
 
           {/* Update Action */}

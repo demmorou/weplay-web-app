@@ -21,8 +21,6 @@ export const columns: ColumnDef<EventModel>[] = [
         aria-label="Select row"
       />
     ),
-    enableSorting: false,
-    enableHiding: false,
   },
   {
     accessorKey: "name",

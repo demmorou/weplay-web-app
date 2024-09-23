@@ -48,7 +48,9 @@ export default function page() {
 
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-              <AccordionTrigger>Ver lista de participantes</AccordionTrigger>
+              <AccordionTrigger>
+                Ver lista de participantes ({event.participants.length})
+              </AccordionTrigger>
               <AccordionContent>
                 <ParticipantsCardList data={event.participants} />
               </AccordionContent>

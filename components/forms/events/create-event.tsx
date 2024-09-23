@@ -91,9 +91,8 @@ export const EventForm: FC<EventFormProps> = (props) => {
             <Button
               title="Copiar link"
               disabled={loading}
-              variant="default"
+              variant="outline"
               size="sm"
-              // Handle open confirmation to delete
               onClick={handleCopyLink}
             >
               {linkCopied ? (
@@ -105,9 +104,8 @@ export const EventForm: FC<EventFormProps> = (props) => {
             <Button
               title="Excluir"
               disabled={loading}
-              variant="destructive"
+              variant="outline"
               size="sm"
-              // Handle open confirmation to delete
               onClick={() => setOpen(true)}
             >
               <Trash className="h-4 w-4" />
@@ -117,7 +115,6 @@ export const EventForm: FC<EventFormProps> = (props) => {
               disabled={loading}
               variant="outline"
               size="sm"
-              // Handle open confirmation to delete
               onClick={() => setOpen(true)}
             >
               Fechar

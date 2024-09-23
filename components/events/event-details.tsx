@@ -20,7 +20,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({ event }) => {
   return (
     <div className="w-full">
       <Card>
-        <CardHeader>{event.name}</CardHeader>
+        <CardHeader className="font-semibold">{event.name}</CardHeader>
 
         <CardContent>
           <div className="w-full flex flex-col space-y-6">

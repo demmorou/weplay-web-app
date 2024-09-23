@@ -15,7 +15,7 @@ const ParticipantModal: React.FC = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="default">Adicionar nome</Button>
+        <Button variant="default">Confirmar presença</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
